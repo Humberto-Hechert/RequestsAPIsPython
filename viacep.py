@@ -17,12 +17,8 @@ def main():
   if 'erro' in adress_data:
     print('\n{}, CEP não reconhecido!'.format(cep))
   else:
-    print('\nCEP: {}'.format(adress_data['cep']))
-    print('Rua: {}'.format(adress_data['logradouro']))
-    print('Complemento: {}'.format(adress_data['complemento']))
-    print('Bairro: {}'.format(adress_data['bairro']))
-    print('Cidade: {}'.format(adress_data['localidade']))
-    print('Estado: {}'.format(adress_data['uf']))
+    for i in adress_data:
+      print('\n{}: {}'.format(i, adress_data[i]))
 
   print('-----------------------------------------')
   option = int(input('\nDeseja realizar uma nova consulta?\n1.Sim\n2.Não\n'))
